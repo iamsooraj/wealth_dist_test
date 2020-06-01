@@ -52,12 +52,12 @@ int main()
             f32WealthforParty2++;
             printf("It's a Tail!");
         }
-        printf(" Toss count: %lu\nCurrent wealth distribution is,\n\tPlayer-1: %d\n\tPlayer-2: %d \n\t(%d%%-%d%%)\n", 
+        printf(" Toss count: %lu\nCurrent wealth distribution is,\n\tPlayer-1: %d$\n\tPlayer-2: %d$ \n\t(%.2f%%-%.2f%%)\n", 
                                                                 u64TossCount,
                                                                 (int)f32WealthforParty1, 
                                                                 (int)f32WealthforParty2, 
-                                                                (int)((f32WealthforParty1/(2*s32Wealth))*100),
-                                                                (int)((f32WealthforParty2/(2*s32Wealth))*100));
+                                                                ((f32WealthforParty1/(float)(2*s32Wealth))*100),
+                                                                ((f32WealthforParty2/(float)(2*s32Wealth))*100));
         usleep(1000);
     }
     if(f32WealthforParty1 <= 0) {
