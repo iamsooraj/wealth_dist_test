@@ -37,7 +37,7 @@ int main()
     scanf("%d", (int *)&s32Wealth);
     f32WealthforParty1 = s32Wealth;
     f32WealthforParty2 = s32Wealth;
-    printf("Game is about to begin %d is for Player-1 and %d is for Player-2\n", HEAD, TAIL);
+    printf("Game is about to begin HEAD is for Player-1 and TAIL is for Player-2\n");
     srand( (unsigned)time( NULL ) ); // Seed for random number
     while (f32WealthforParty1 > 0 && f32WealthforParty2 > 0)
     {
@@ -52,7 +52,7 @@ int main()
             f32WealthforParty2++;
             printf("It's a Tail!");
         }
-        printf(" Toss count: %lu\nCurrent wealth distribution is,\n\tPlayer-1: %d$\n\tPlayer-2: %d$ \n\t(%.2f%%-%.2f%%)\n", 
+        printf(" Toss count: %lu\nCurrent wealth distribution is,\n\tPlayer-1: $%d\n\tPlayer-2: $%d \n\t(%.2f%% - %.2f%%)\n", 
                                                                 u64TossCount,
                                                                 (int)f32WealthforParty1, 
                                                                 (int)f32WealthforParty2, 
@@ -61,9 +61,9 @@ int main()
         usleep(1000);
     }
     if(f32WealthforParty1 <= 0) {
-        printf("Player-1 is bankrupt, and Player-2 have balance of %d\n", (int)f32WealthforParty2);
+        printf("Player-1 is bankrupt, and Player-2 have balance of $%d\n", (int)f32WealthforParty2);
     } else {
-        printf("Player-2 is bankrupt, and Player-1 have balance of %d\n", (int)f32WealthforParty1);
+        printf("Player-2 is bankrupt, and Player-1 have balance of $%d\n", (int)f32WealthforParty1);
     }
 
 }
